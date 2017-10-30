@@ -10,4 +10,5 @@ player=vlc.MediaPlayer('rtsp://192.168.100.1/cam1/mpeg4')
 player.play()
 
 while 1:
-    player.video_take_snapshot(0,'c:/wicam.png',0, 0)
+    cv2.waitKey(1)
+    
