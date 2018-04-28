@@ -1,6 +1,6 @@
 import cv2
 
-image = cv2.imread('test.png')
+image = cv2.imread('test.jpg')
 
 gray  = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 edges = cv2.Canny(gray,100,200)
