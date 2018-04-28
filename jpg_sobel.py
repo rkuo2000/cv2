@@ -1,6 +1,7 @@
+# openCV read test.jpg and generate Sobel effects
 import cv2
 
-org = cv2.imread('test.png')
+org = cv2.imread('test.jpg')
 
 gray  = cv2.cvtColor(org, cv2.COLOR_RGB2GRAY)
 
