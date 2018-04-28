@@ -1,6 +1,7 @@
+# openCV read test.jpg and resize the image to 2X
 import cv2
 
-img = cv2.imread('c:/test.jpg')
+img = cv2.imread('test.jpg')
 height,width = img.shape[:2]
 
 res = cv2.resize(img, (2*width, 2*height), interpolation = cv2.INTER_CUBIC)
