@@ -1,7 +1,8 @@
+# openCV read test.jpg and rotate the image
 import cv2
 import numpy as np
 
-img = cv2.imread('c:/test.jpg')
+img = cv2.imread('test.jpg')
 rows,cols = img.shape[:2]
 
 M = cv2.getRotationMatrix2D((cols/2, rows/2), 90, 1)
