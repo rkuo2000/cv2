@@ -1,3 +1,4 @@
+# openCV read test.jpg, color converted to gray, then run OpenCV canny to generate edge detection
 import cv2
 
 image = cv2.imread('test.jpg')
