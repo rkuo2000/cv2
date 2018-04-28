@@ -1,3 +1,4 @@
+# openCV color space conversion into Gray/HSV, and converted from Gray/HSV to RGB
 import cv2
 
 img = cv2.imread('test.jpg')
