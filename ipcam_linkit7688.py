@@ -1,10 +1,11 @@
+# capture image from linkit7688 webcam, and display using CV2 on PC
 from PIL import Image
 import urllib.request
 import io
 import numpy as np
 import cv2
 
-URL = 'http://192.168.43.176:8080/?action=snapshot -O linki7688.jpg'
+URL = 'http://192.168.43.176:8080/?action=snapshot -O linkit7688.jpg'
 
 while 1:
     with urllib.request.urlopen(URL) as url:
