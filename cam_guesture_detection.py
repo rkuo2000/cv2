@@ -1,6 +1,6 @@
 # organize imports
 import cv2
-import imutils
+#import imutils
 import numpy as np
 
 # global variables
@@ -62,7 +62,7 @@ if __name__ == "__main__":
         # get the current frame
         (grabbed, frame) = camera.read()
         # resize the frame
-        frame = imutils.resize(frame, width=700)
+        #frame = imutils.resize(frame, width=700)
 		
         # flip the frame so that it is not the mirror view
         frame = cv2.flip(frame, 1)
