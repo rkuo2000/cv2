@@ -1,3 +1,4 @@
+# for using PiCamera (to runn on RPi3B)
 from picamera import PiCamera
 from time import sleep
 
