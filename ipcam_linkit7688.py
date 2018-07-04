@@ -1,4 +1,4 @@
-# capture image from linkit7688 webcam, and display using CV2 on PC
+# capture image from linkit7688 webcam (running mjpg_streamer), and display on PC
 from PIL import Image
 import urllib.request
 import io
