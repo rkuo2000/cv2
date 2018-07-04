@@ -1,4 +1,4 @@
-# capture image from RPi3 usb web (running motion), and display using CV2 on PC
+# capture image from RPi3 usb camera (running mjpg_streamer), and display on PC
 from PIL import Image
 import urllib.request
 import io
