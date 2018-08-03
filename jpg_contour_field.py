@@ -3,7 +3,7 @@ import cv2
 
 img = cv2.imread('field.jpg')
 height, width, channels = img.shape
-roi = img[int(height*0.65):height, int(width*0.1):int(width*0.9)]
+roi = img[int(height*0.7):height, int(width*0.1):int(width*0.9)]
 cv2.imshow('ROI', roi)
 
 gray = cv2.cvtColor(roi,cv2.COLOR_BGR2GRAY)
@@ -17,6 +17,7 @@ _, cnts, hierarchy = cv2.findContours(edge,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SI
 # draw Bounding Rectangle
 for c in cnts:
     (x,y,w,h) = cv2.boundingRect(c)
+    print(x,y,w,h)
     cv2.rectangle(roi, (x,y), (x+w, y+h), (0,255,0), 1)
 
 # draw Area Rectangle
