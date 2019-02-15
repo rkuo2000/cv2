@@ -22,7 +22,7 @@ while(1):
     for c in cnts:
         (x,y,w,h) = cv2.boundingRect(c)        
         area=w*h
-        if(area>20000 ):
+        if(area<20000 ):
             continue
         cv2.rectangle(roi, (x,y), (x+w, y+h), (0,255,0), 3)
         cv2.circle(roi, (int(x+w/2),int(y+h/2)), 5, (0,0,255), 5)
