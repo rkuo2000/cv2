@@ -17,10 +17,10 @@ while(1):
     hsv2 = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     hsv = cv2.GaussianBlur(hsv2,(11,11),0)
 	
-	# get mask
+    # get mask
     mask = cv2.inRange(hsv, lower_orange, upper_orange)
     edge = cv2.Canny(mask, 20, 160)
-    _, cnts, hierarchy = cv2.findContours(edge,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+    cnts, hierarchy = cv2.findContours(edge,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
     for c in cnts:
       M= cv2.moments(c)
       if M["m00"] != 0:
