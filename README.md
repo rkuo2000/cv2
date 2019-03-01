@@ -1,5 +1,5 @@
-# cv2
-opencv-python sample codes (on Windows PC)
+# opencv-python sample codes
+'$pip3 install opencv-contrib-python'
 
 examples for
 1. jpg
