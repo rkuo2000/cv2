@@ -1,5 +1,5 @@
 # opencv-python sample codes
-To install opencv 4.0.0.21 python packages<br />
+*To install opencv 4.0.0.21 python packages*<br />
 `$pip3 install opencv-contrib-python`<br />
 <br />
 *To install cmake for windows* <br />
