@@ -7,7 +7,7 @@ height, width, channels = img.shape
 roi = img[int(height*0.3):height, 0:width]
 cv2.imshow('ROI', roi)
 
-hsv  = cv2.cvtColor(roi,cv2.COLOR_BGR2HSV)
+hsv  = cv2.cvtColor(roi,cv2.COLOR_RGB2HSV)
 lower_green = np.array([35,90,120])
 upper_green = np.array([75,180,200])
 
