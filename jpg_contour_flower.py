@@ -10,7 +10,7 @@ filtered = cv2.inRange(image, lower, upper)
 blurred  = cv2.GaussianBlur(filtered, (15, 15), 0)
 
 # find contours in the image
-(_, cnts, _) = cv2.findContours(blurred.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+(cnts, hierarchy) = cv2.findContours(blurred.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
 if len(cnts) >0:
     cnt = sorted(cnts, key=cv2.contourArea, reverse = True)[0]
