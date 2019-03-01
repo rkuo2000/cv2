@@ -30,7 +30,7 @@ def find_biggest_contour(image):
     #Optional output vector, containing information about the image topology.
     #It has as many elements as the number of contours.
     #we dont need it
-    _, contours, hierarchy = cv2.findContours(image, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    (contours, hierarchy) = cv2.findContours(image, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 
     # Isolate largest contour
     contour_sizes = [(cv2.contourArea(contour), contour) for contour in contours]
