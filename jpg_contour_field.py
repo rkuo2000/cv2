@@ -12,7 +12,7 @@ edge = cv2.Canny(blur, 20, 160)
 cv2.imshow('BLUR', blur)
 cv2.imshow('EDGE', edge)
 
-_, cnts, hierarchy = cv2.findContours(edge,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+cnts, hierarchy = cv2.findContours(edge,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
 
 # draw Bounding Rectangle
 for c in cnts:
