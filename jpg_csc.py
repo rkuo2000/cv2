@@ -2,10 +2,10 @@
 import cv2
 
 img = cv2.imread('test.jpg')
-gray= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-org1= cv2.cvtColor(gray,cv2.COLOR_GRAY2BGR)
-org2= cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
+gray= cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+org1= cv2.cvtColor(gray,cv2.COLOR_GRAY2RGB)
+org2= cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
 
 cv2.imshow('ORG' ,img)
 cv2.imshow('GRAY',gray)
