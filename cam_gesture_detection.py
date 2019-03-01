@@ -31,7 +31,7 @@ def segment(image, threshold=25):
     thresholded = cv2.threshold(diff,threshold,255,cv2.THRESH_BINARY)[1]
 
     # get the contours in the thresholded image
-    (_, cnts, _) = cv2.findContours(thresholded.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+    (cnts, hierarchy) = cv2.findContours(thresholded.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
 
     # return None, if no contours detected
     if len(cnts) == 0:
@@ -77,7 +77,7 @@ if __name__ == "__main__":
         roi = frame[top:bottom, right:left]
 
         # convert the roi to grayscale and blur it
-        gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
+        gray = cv2.cvtColor(roi, cv2.COLOR_RGB2GRAY)
         gray = cv2.GaussianBlur(gray, (7, 7), 0)
 
         # to get the background, keep looking till a threshold is reached
