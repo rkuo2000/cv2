@@ -7,7 +7,7 @@ import argparse
 import imutils
 import cv2
 
-filename = "pedestrian.jpg"
+filename = "human.jpg"
 
 # initialize the HOG descriptor/person detector
 hog = cv2.HOGDescriptor()
