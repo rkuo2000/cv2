@@ -9,7 +9,7 @@ while 1:
     img_array = np.array(bytearray(resp.read()), dtype=np.uint8)
     img = cv2.imdecode(img_array, -1)
 
-    cv2.imshow('CAM', img)
+    cv2.imshow('IMG', img)
     cv2.waitKey(1)
 
 cv2.destroyAllWindows()
