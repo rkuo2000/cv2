@@ -1,10 +1,5 @@
-# Tesseract4 (for Windows : https://github.com/UB-Mannheim/tesseract/wiki)
-#            (for Linux   : sudo apt install tesseract-ocr libtesseract-dev)
-# pip install pytesseract
-# Usage : python3 ocr.py ocr1.png
 import sys
 import cv2
-import pytesseract
 import imutils
 import numpy as np
 
@@ -34,8 +29,7 @@ def remove_noise_and_smooth(file_name):
 filename = 'receipt.png'
 
 #1 detect the text block with skew in the image 	
-#image = cv2.imread(filename)
-image=remove_noise_and_smooth(filename)
+image = cv2.imread(filename)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 gray = cv2.GaussianBlur(gray, (5, 5), 0)
 edged = cv2.Canny(gray, 10, 50)
