@@ -1,8 +1,11 @@
+# open browser at ipaddr of ESP32-CAM to set stream size
+# 320x240 doesn't work, other resolution are OK
 import numpy as np
 import cv2
 from urllib.request import urlopen
 
-url = 'http://192.168.1.5:81/stream'
+# port 81 has stream, see ESP32-CAM webserver.ino
+url = 'http://192.168.1.5:81/stream' 
 CAMERA_BUFFER_SIZE = 4096
 stream = urlopen(url)
 bbb=b''
