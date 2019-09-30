@@ -6,9 +6,9 @@
 #               press q to quit
                      
 # Tracker: csrt, kcf, boosting, mil, tld, medianflow, mosse 
-# CSRT for slower FPS, higher object tracking accuracy
-# KCF  for faster FPS, lower  object tracking accuracy
-# MOOSE for fastest FPS
+# csrt  for slower FPS, higher object tracking accuracy
+# kcf   for faster FPS, lower  object tracking accuracy
+# mosse for fastest FPS
 
 from imutils.video import VideoStream
 from imutils.video import FPS
