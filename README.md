@@ -7,3 +7,8 @@
 <br />
 ## Sample Codes
 `$git clone https://github.com/rkuo2000/cv2`<br />
+`$cd cv2`<br />
+**read jpg file to process** <br />
+`$python3 jpg_csc.py`<br />
+**capture webcam to process** <br />
+`$python3 cam.py`<br />
