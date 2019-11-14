@@ -2,37 +2,13 @@ import cv2
 import numpy as np
 import imutils
 
-# global variables
-bg = None
-
-def run_avg(image, aWeight):
-    global bg
-	
-    if bg is None:
-        bg = image.copy().astype("float")
-        return
-
-    cv2.accumulateWeighted(image, bg, aWeight)
-
-def segment(image, threshold=25):
-    global bg
-	
-    diff = cv2.absdiff(bg.astype("uint8"), image)
-    thresholded = cv2.threshold(diff,threshold,255,cv2.THRESH_BINARY)[1]
-    (cnts, hierarchy) = cv2.findContours(thresholded.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
-    if len(cnts) == 0:
-        return
-    else:
-        segmented = max(cnts, key=cv2.contourArea)
-        return (thresholded, segmented)
-
 if __name__ == "__main__":
     # initialize weight for running average
     aWeight = 0.5
 
     cap = cv2.VideoCapture(0)
     top, right, bottom, left = 10, 350, 225, 590 # ROI coordinates
-    num_frames = 0
+    num_frame = 0
 
     while(True):
         (grabbed, frame) = cap.read()
@@ -44,22 +20,20 @@ if __name__ == "__main__":
         (height, width) = frame.shape[:2]
         roi = frame[top:bottom, right:left]
         gray = cv2.cvtColor(roi, cv2.COLOR_RGB2GRAY)
-        gray = cv2.GaussianBlur(gray, (7, 7), 0)
+        gray = cv2.GaussianBlur(gray, (5, 5), 0)
+        blur = cv2.GaussianBlur(gray, (5,5), 0)		
+        #thresh = cv2.threshold(blur, 45, 255, cv2.THRESH_BINARY)[1]
+        thresh = cv2.threshold(blur, 230, 255, cv2.THRESH_BINARY_INV)[1]
+        cv2.imshow("thresh", thresh)
 
-        # to get the background, keep looking till a threshold is reached
-        # so that our running average model gets calibrated
-        if num_frames < 30:
-            run_avg(gray, aWeight)
-        else:
-            hand = segment(gray)
-            if hand is not None:
-                (thresholded, segmented) = hand
-                cv2.drawContours(clone, [segmented + (right, top)], -1, (0, 0, 255))
-                cv2.imshow("Thesholded", thresholded)
-        cv2.rectangle(clone, (left, top), (right, bottom), (0,255,0), 2)
-        num_frames += 1
-
-        cv2.imshow("Video Feed", clone)
+        cnts = cv2.findContours(thresh,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+        cnts = imutils.grab_contours(cnts)
+        c = max(cnts, key=cv2.contourArea)
+        cv2.drawContours(roi, [c], -1, (0, 255, 255), 2)
+        frame[top:bottom, right:left]=roi
+        cv2.imshow("frame", frame)
+        print("frame no.", num_frame)
+        num_frame += 1
         keypress = cv2.waitKey(1) & 0xFF
         if keypress == ord("q"): # press q to stop
             break
