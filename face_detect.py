@@ -14,8 +14,7 @@ bboxes = face.detectMultiScale(gray)
 
 for box in bboxes:
     print(box)
-
-for (x,y,w,h) in bboxes:
+    (x,y,w,h) = tuple(box)
     img = cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
 
 cv2.imshow('img',img)
