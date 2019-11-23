@@ -3,9 +3,11 @@ import numpy as np
 import cv2
 import sys
 
-filename = sys.argv[1]
+if len(sys.argv)>1:
+    img = cv2.imread(sys.argv[1])
+else:
+    img = cv2.imread("friends.jpg")
 
-img  = cv2.imread(filename)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 face = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')

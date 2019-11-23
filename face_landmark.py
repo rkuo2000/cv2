@@ -5,9 +5,12 @@ import face_recognition
 import cv2
 import sys
 
-# Load the jpg file into a numpy array
-filename = sys.argv[1]
-image = face_recognition.load_image_file(filename)
+if len(sys.argv)>1:
+    image = face_recognition.load_image_file(sys.argv[1])
+else:
+    image = face_recognition.load_image_file("keanu.jpg")
+
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # Find all facial features in all the faces in the image
 face_landmarks_list = face_recognition.face_landmarks(image)
