@@ -29,7 +29,7 @@ while(True):
     if keypress == ord("q"): # press q to quit
         break	
     if keypress == ord(" "): # press space to save the captured image
-        filename="scissors_"+str(count)+".jpg"
+        filename="rock_"+str(count)+".jpg"
         print(filename)
         cv2.imwrite(filename, roi)
         count+=1                      
