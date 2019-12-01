@@ -1,17 +1,13 @@
-# Usage: python resize.py 1.jpg
-# Output: resized.jpg
+# resize images in a folder
 import cv2
 import sys
+import os
 
-filename = sys.argv[1]
-img = cv2.imread(filename)
-height,width = img.shape[:2]
+path = sys.argv[1]
+files = os.listdir(path)
+print(files)
 
-print("Shrink image size to 50% !")
-percentage = 0.5
-res = cv2.resize(img, (int(width*percentage), int(height*percentage)), interpolation = cv2.INTER_CUBIC)
-cv2.imshow('Resize', res)
-cv2.imwrite('resized.jpg', res)
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+for file in files:
+    img = cv2.imread(path+'/'+file)
+    res = cv2.resize(img, (96,96), interpolation = cv2.INTER_CUBIC)
+    cv2.imwrite(path+'/'+file, res)
