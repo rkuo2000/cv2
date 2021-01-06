@@ -51,7 +51,6 @@ for face in faces:
     cv2.imwrite(file+'_nose.jpg', nose)
 	
 	# get mouth
-    cv2.imwrite(file+'_nose.jpg', nose)
     mouth_y_lo = min(mouth_left_y, mouth_right_y)	
     mouth_y_hi = max(mouth_left_y, mouth_right_y)	
     mouth= img[ mouth_y_lo-10 : mouth_y_hi+25, mouth_left_x : mouth_right_x] 
