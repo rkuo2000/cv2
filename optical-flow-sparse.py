@@ -37,8 +37,8 @@ mask = np.zeros_like(first_frame)
 
 while(cap.isOpened()):
     ret, frame = cap.read() # capture a frame
-    frame = cv2.flip(frame, 0)
-    frame = cv2.flip(frame, 1)
+    #frame = cv2.flip(frame, 0)
+    #frame = cv2.flip(frame, 1)
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) # convert to Gray	
     # Calculates sparse optical flow by Lucas-Kanade method
     # https://docs.opencv.org/3.0-beta/modules/video/doc/motion_analysis_and_object_tracking.html#calcopticalflowpyrlk
