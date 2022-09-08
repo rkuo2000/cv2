@@ -31,8 +31,6 @@ mask[..., 1] = 255
 while(cap.isOpened()):
     # ret = a boolean return value from getting the frame, frame = the current frame being projected in the video
     ret, frame = cap.read()
-    frame = cv2.flip(frame, 0)  
-    frame = cv2.flip(frame, 1) 
     # Opens a new window and displays the input frame
     #cv.imshow("input", frame)
     # Converts each frame to grayscale - we previously only converted the first frame to grayscale
