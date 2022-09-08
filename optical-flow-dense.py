@@ -1,4 +1,3 @@
-# pip install opencv-python==4.5.3.56
 import sys
 import cv2
 import numpy as np
