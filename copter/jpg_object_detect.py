@@ -53,5 +53,5 @@ cv2.imshow('B-BOX', image)
 print(x,y,w,h)
 print(cX,cY)
 
-cv2.waitKey(0)
+cv2.waitKey(1)
 cv2.destroyAllWindows()
