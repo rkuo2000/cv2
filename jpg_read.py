@@ -15,4 +15,4 @@ print(img.shape)
 cv2.imshow('Image',img)
 
 cv2.waitKey(0)
-cv2.DestroyAllWindows()
+cv2.destroyAllWindows()
