@@ -28,6 +28,5 @@ while(cap.isOpened()):
         result = model.generate_content( [prompt , img] )
         print(result.text)
         
-#    time.sleep(1) 
 cap.release()
 cv2.destroyAllWindows()
