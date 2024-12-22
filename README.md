@@ -24,7 +24,7 @@ cd cv2
 
 ### read JPEG
 `python3 jpg_read.jpg`<br>
-[~/cv2/jpg_read.py](https://github.com/rkuo2000/cv2/blob/master/jpg_read.py)<br>
+
 ```
 import cv2
 import sys
@@ -49,7 +49,6 @@ cv2.DestroyAllWindows()
 ---
 ### open Camera
 `python3 cam.py`<br>
-[~/cv2/cam.py](https://github.com/rkuo2000/cv2/blob/master/cam.py)<br>
 
 ```
 import cv2
@@ -110,7 +109,8 @@ HSV模型的圓錐表示適合於在一個單一物體中展示整個HSV色彩�
 
 ---
 ### [OpenCV color conversion](https://docs.opencv.org/4.6.0/de/d25/imgproc_color_conversions.html)
-[~/cv2/jpg_csc.py](https://github.com/rkuo2000/cv2/blob/master/jpg_csc.py)
+`python jpg_csc.py`<br>
+
 ```
 import cv2
 
@@ -132,7 +132,7 @@ cv2.destroyAllWindows()
 
 ---
 ### Object Tracking by Color
-[~/cv2/cam_object_tracking.py](https://github.com/rkuo2000/cv2/blob/master/cam_object_tracking.py)<br>
+`python cam_object_tracking.py`<br>
 
 ```
 import cv2
@@ -169,14 +169,14 @@ cv2.destroyAllWindows()
 
 ---
 ### [Skin Isolation](https://nalinc.github.io/blog/2018/skin-detection-python-opencv/)
-[~/cv2/cam_skin_detection.py](https://github.com/rkuo2000/cv2/blob/master/cam_skin_detection.py)<br>
-[~/cv2/jpg_skin_detection.py](https://github.com/rkuo2000/cv2/blob/master/jpg_skin_detection.py)<br>
+`python cam_skin_detection.py`<br>
+`python jpg_skin_detection.py`<br>
 ![](https://nalinc.github.io/assets/img/skin-detection/hsv.png)
 
 ---
 ### [Image Thresholding](https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html)
 
-* **Simple Thresholding**: [~/cv2/jpg_image_thresholding.py](https://github.com/rkuo2000/cv2/blob/master/jpg_image_thresholding.py)
+* **Simple Thresholding**: `python jpg_image_thresholding.py`
 ![](https://docs.opencv.org/4.x/threshold.jpg)
   - cv2.THRESH_BINARY
   - cv2.THRESH_BINARY_INV
@@ -184,10 +184,10 @@ cv2.destroyAllWindows()
   - cv2.THRESH_TOZERO
   - cv2.THRESH_TOZERO_INV
   
-* **Adaptive Thresholding**: [~/cv2/jpg_adaptive_thresholding.py](https://github.com/rkuo2000/cv2/blob/master/jpg_adaptive_thresholding.py)
+* **Adaptive Thresholding**: `python jpg_adaptive_thresholding.py`
 ![](https://docs.opencv.org/4.x/ada_threshold.jpg)
 
-* **Otsu’s Binarization**: [~/cv2/jpg_otsu_binarization.py](https://github.com/rkuo2000/cv2/blob/master/jpg_otsu_binarization.py)
+* **Otsu’s Binarization**: `python jpg_otsu_binarization.py`
 ![](https://docs.opencv.org/4.x/otsu.jpg)
 
 ---
@@ -213,7 +213,8 @@ cv2.destroyAllWindows()
 * Black Hat
 ![](https://github.com/rkuo2000/AI-course/blob/gh-pages/images/OpenCV_morphological_transformations.png?raw=true)
 
-[~/cv2/jpg_morphological_transformations.py](https://github.com/rkuo2000/cv2/blob/master/jpg_morphological_transformations.py)<br>
+`python jpg_morphological_transformations.py`<br>
+
 ```
 import cv2
 import numpy as np
@@ -253,7 +254,9 @@ Reference: [OpenCV學習筆記】之仿射變換（Affine Transformation）](htt
 ---
 ### [Image Gradients](https://docs.opencv.org/4.6.0/d5/d0f/tutorial_py_gradients.html)
 ![](https://docs.opencv.org/4.6.0/gradients.jpg)
-[~/cv2/jpg_sobel.py](https://github.com/rkuo2000/cv2/blob/master/jpg_sobel.py)<br>
+
+`python jpg_sobel.py`<br>
+
 ```
 import cv2
 
@@ -280,10 +283,10 @@ cv2.destroyAllWindows()
 
 ---
 ### [Fourier Transform](https://docs.opencv.org/4.6.0/de/dbc/tutorial_py_fourier_transform.html)
-[~/cv2/jpg_fft.py](https://github.com/rkuo2000/cv2/blob/master/jpg_fft.py)
+`python jpg_fft.py`<br>
 ![](https://docs.opencv.org/4.6.0/fft1.jpg)
 
-[~/cv2/jpg_dft.py](https://github.com/rkuo2000/cv2/blob/master/jpg_dft.py)
+`python jpg_dft.py`<br>
 ![](https://docs.opencv.org/4.6.0/fft4.jpg)
 
 * Why Laplacian/Sobel is a High Pass Filter?<br>
@@ -302,7 +305,7 @@ From image, you can see what frequency region each kernel blocks, and what regio
    
 [邊緣偵測懶人包-Canny演算法](https://medium.com/@bob800530/opencv-%E5%AF%A6%E4%BD%9C%E9%82%8A%E7%B7%A3%E5%81%B5%E6%B8%AC-canny%E6%BC%94%E7%AE%97%E6%B3%95-d6e0b92c0aa3)<br>
 
-[~/cv2/jpg_canny.py](https://github.com/rkuo2000/cv2/blob/master/jpg_canny.py)<br>
+`python jpg_canny.py`<br>
 ![](https://docs.opencv.org/4.x/canny1.jpg)
 
 ---
@@ -310,7 +313,8 @@ From image, you can see what frequency region each kernel blocks, and what regio
 [Hough Transform](https://learnopencv.com/hough-transform-with-opencv-c-python/)
 * Hough Lines<br>
 ![](https://learnopencv.com/wp-content/uploads/2019/03/line-detection.jpg)
-[~/cv2/jpg_houghlines.py](https://github.com/rkuo2000/cv2/blob/master/jpg_houghlines.py)<br>
+
+`python jpg_houghlines.py`<br>
 
 ```
 img = cv2.imread('lanes.jpg', cv2.IMREAD_COLOR) # road.png is the filename
@@ -330,7 +334,8 @@ cv2.imshow("Result Image", img)
 * Hough Circles<br>
 ![](https://learnopencv.com/wp-content/uploads/2019/03/circle-detection.jpg)
 ![](https://learnopencv.com/wp-content/uploads/2019/03/circle-detection-hough-transform-opencv.jpg)
-[~/cv2/jpg_houghcircles.py](https://github.com/rkuo2000/cv2/blob/master/jpg_houghcircles.py)<br>
+
+`python jpg_houghcircles.py`<br>
 
 ```
 img = cv2.imread('circles.png', cv2.IMREAD_COLOR)
@@ -398,7 +403,7 @@ plt.show()
 </table>
 
 * **Histogram Equalization**<br>
-[~/cv2/jpg_histogram_equalization.py](https://github.com/rkuo2000/cv2/blob/master/jpg_histogram_equalization.py)<br>
+`python jpg_histogram_equalization.py`<br>
 
 ```
 img = cv2.imread('test.jpg')
@@ -410,7 +415,7 @@ cv2.imshow('Equalized', dst)
 
 ---
 * **Histogram Backprojection**<br>
-[~/cv2/jpg_histogram_backprojection.py](https://github.com/rkuo2000/cv2/blob/master/jpg_histogram_backprojection.py)<br>
+`python jpg_histogram_backprojection.py`<br>
 
 ---
 ### Contours
@@ -457,7 +462,9 @@ cv2.imshow('Equalized', dst)
 ---
 ### [Hand Contour](https://pyimagesearch.com/2016/04/11/finding-extreme-points-in-contours-with-opencv/)
 ![](https://929687.smushcdn.com/2633864/wp-content/uploads/2016/04/extreme_points_header.jpg?lossy=1&strip=1&webp=1)
-[~/cv2/jpg_contour_hand.py](https://github.com/rkuo2000/cv2/blob/master/jpg_contour_hand.py)<br>
+
+`python jpg_contour_hand.py`<br>
+
 ```
 img_path = "hand.jpg"
 img = cv.imread(img_path)
@@ -525,17 +532,18 @@ while True:
 
 ---
 ### Color Matching
-[~/cv2/color_matching_histogram.py](https://github.com/rkuo2000/cv2/blob/master/color_matching_histogram.py)<br>
+`python color_matching_histogram.py`<br>
 ![](https://answers.opencv.org/upfiles/15105033985012805.png)
 
-[~/cv2/color_matching_meanstddev.py](https://github.com/rkuo2000/cv2/blob/master/color_matching_meanstddev.py)<br>
+`python color_matching_meanstddev.py`<br>
 ![](https://github.com/rkuo2000/cv2/blob/master/OpenCV_Color_Matching_meanstddev.png?raw=true)
 
 ---
 ### Face Detection using [Cascade Classifier](https://docs.opencv.org/4.6.0/db/d28/tutorial_cascade_classifier.html)
 ![](https://docs.opencv.org/4.6.0/haar.png)
 
-[~/cv2/jpg_face_detect.py](https://github.com/rkuo2000/cv2/blob/master/jpg_face_detect.py)<br>
+`python jpg_face_detect.py`<br>
+
 ```
 if len(sys.argv)>1:
     img = cv2.imread(sys.argv[1])
@@ -680,15 +688,15 @@ Output: .jpg & .midi
 
 ---
 ### 撿乒乓球機器人
-[~/cv2/cam_pingpong.py](https://github.com/rkuo2000/cv2/blob/master/cam_pingpong.py)<br>
+`python cam_pingpong.py`<br>
 ![](https://github.com/rkuo2000/Robotics/blob/main/images/RoboCar_Ball_Picker.jpg?raw=true)
 
 ---
 ### 割草機器人
-[~/cv2/jpg_detect_lawn.py](https://github.com/rkuo2000/cv2/blob/master/jpg_detect_lawn.py)<br>
+`python jpg_detect_lawn.py`<br>
 ![](https://github.com/rkuo2000/cv2/blob/master/lawn1.jpg?raw=true)
 
 ---
 ### 高爾夫球機器人
-[~/cv2/jpg_contour_field.py](https://github.com/rkuo2000/cv2/blob/master/jpg_contour_field.py)<br>
+`python jpg_contour_field.py`<br>
 ![](https://github.com/rkuo2000/cv2/blob/master/field.jpg?raw=true)
