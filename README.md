@@ -615,7 +615,7 @@ where u = dx/dt, v = dy/dt
 To track the motion of vehicles across frames<br>
 ![](https://nanonets.com/blog/content/images/2019/04/intro-1-2.gif)
 
-[~/cv2/drone_optical_flow.py](https://github.com/rkuo2000/cv2/blob/master/drone_optical_flow.py)
+`python drone_optical_flow.py`<br>
 
 ---
 ## Applications
@@ -660,7 +660,7 @@ Scaling Image<br>
 Skew Correction<br>
 ![](https://miro.medium.com/max/720/1*i0Xv2BnK6SVEQsh0Ex7iJg.png)
 
-[~cv2/ocr_skew_correction.py](https://github.com/rkuo2000/cv2/blob/master/ocr_skew_correction.py)<br>
+`python ocr_skew_correction.py`<br>
 
 ---
 ### QR Scanner
