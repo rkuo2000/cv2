@@ -23,7 +23,7 @@ cd cv2
 ## Image Processing (影像處理)
 
 ### open JPG/PNG file
-`python3 jpg_read.jpg`<br>
+`python3 jpg_read.py`<br>
 
 ```
 import cv2
